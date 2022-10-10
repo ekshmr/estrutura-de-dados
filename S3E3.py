@@ -1,7 +1,12 @@
+from typing import TypedDict
+
+
 contador: int = 0
 nome_carro: str
-qual_carro: str
-catalogo: dict = {}
+qual_carro: str = str()
+class Catalogo(TypedDict):
+    modelo: str
+    valores: dict[str, dict[str, float]]
 litros_a_cada_cem_km_str: str
 litros_a_cada_cem_km: float
 tipo_carro: str
@@ -17,7 +22,6 @@ valor_kWh: float = 1.304
 reais_por_km_rodados: float
 reais_por_km_rodados_loop: float
 valor_mais_economico: float
-dado: any
 valor1: float
 valot2: float
 valor3: float
@@ -35,6 +39,8 @@ while contador < 5:
             qual_carro = "quarto"
         case 4:
             qual_carro = "quinto"
+        case _:
+            pass
     nome_carro = str(input(f"Digite o modelo do {qual_carro} carro "))
     tipo_carro = str(input("Digite o tipo do carro (Tradicional/Elétrico) "))
     if tipo_carro == "Tradicional" or tipo_carro == "tradicional":
@@ -61,7 +67,7 @@ while contador < 5:
     contador += 1
 print(catalogo)
 ## CRÉDITOS AO ZERO ##
-carro_eco = ['', 999]
+carro_eco: list[str | int] = ['', 999]
 for x in catalogo:
     if catalogo[x]["R$/km"] <= carro_eco[1]:
             carro_eco[0] = x
