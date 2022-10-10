@@ -1,5 +1,5 @@
 import os
-def limpar() -> int:
+def limpar() -> None:
     os.system('cls')
 
 limpar()
@@ -35,6 +35,8 @@ while quantidade_votos > 0:
         case "6":
             escolha = "Voto Branco"
             votos_branco += 1
+        case _:
+            pass
     limpar()
 
 total_votos: float = round(candidato_a + candidato_b + candidato_c + candidato_d + votos_nulo + votos_branco, 0)

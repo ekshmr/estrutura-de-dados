@@ -1,4 +1,4 @@
-numeros: list = []
+numeros: list[int] = []
 continuar: bool = True
 mensagem: str
 valor: int
@@ -10,7 +10,7 @@ while continuar == True:
         valor = int(input("Digite um valor qualquer: "))
         numeros.append(valor)
 
-def soma_valores(lista: list) -> int:
+def soma_valores(lista: list[int]) -> int:
     soma: int = 0
     for valor in lista:
         soma += valor

@@ -1,4 +1,4 @@
-calcular_horas_trabalhadas_mes: bool
+calcular_horas_trabalhadas_mes: bool = bool()
 resposta: str = str(input("Deseja saber quantas horas você trabalha ao mês? (S/n) "))
 match resposta:
     case "S":
@@ -9,6 +9,8 @@ match resposta:
         calcular_horas_trabalhadas_mes = False
     case "n":
         calcular_horas_trabalhadas_mes = False
+    case _:
+        pass
 
 match calcular_horas_trabalhadas_mes:
     case True:
@@ -18,8 +20,7 @@ match calcular_horas_trabalhadas_mes:
         horas_trabalhadas_mes: float = float(input("Quantas horas você trabalha por mês? "))
         horas_trabalhadas_semana: float = horas_trabalhadas_mes / 4
 
-
-calcular_valor_por_hora: bool
+calcular_valor_por_hora: bool = bool()
 resposta = str(input("Deseja saber o valor de horas trabalhadas ao mês? (S/n) "))
 match resposta:
     case "S":
@@ -30,14 +31,20 @@ match resposta:
         calcular_valor_por_hora = True
     case "n":
         calcular_valor_por_hora = True
+    case _:
+        pass
 
+valor_salario_bruto: float = float()
+valor_por_hora: float = float()
 match calcular_valor_por_hora:
     case True:
-        valor_salario_bruto: float = float(input("Quanto você ganha por mês? "))
-        valor_por_hora: float = round(valor_salario_bruto / horas_trabalhadas_mes, 2)
+        valor_salario_bruto = float(input("Quanto você ganha por mês? "))
+        valor_por_hora = round(valor_salario_bruto / horas_trabalhadas_mes, 2)
     case False:
-        valor_por_hora: float = float(input("Quanto você ganha por hora? "))
-        valor_salario_bruto: float = valor_por_hora * horas_trabalhadas_mes
+        valor_por_hora = float(input("Quanto você ganha por hora? "))
+        valor_salario_bruto = valor_por_hora * horas_trabalhadas_mes
+    case _:
+        pass
 
 def valor_imposto_renda(valor: float) -> float:
     return valor * 0.08

@@ -1,6 +1,6 @@
 saltos: int = 0
 nome_atleta: str = str(input("Digite o nome do atleta "))
-alcance_saltos: list = []
+alcance_saltos: list[float] = list()
 valor_salto: float
 while saltos < 5:
     valor_salto = float(input("Digite a distancia do salto "))
@@ -22,6 +22,8 @@ while saltos < 5:
             string_salto = "Quarto"
         case 4:
             string_salto = "Quinto"
+        case _:
+            pass
     salto_atual = alcance_saltos[saltos]
     print(f"{string_salto} salto: {salto_atual} m")
     saltos += 1

@@ -7,7 +7,7 @@ def valida_pessoa(nome: str, idade: int, salario: float, sexo: str, estado_civil
     if salario < 1:
         valido = False
     if sexo == "f" or sexo == "m":
-        string: str = "sexo valido"
+        valido = True
     else:
         valido = False
     if estado_civil != ("s" or "c" or "v" or "d"):

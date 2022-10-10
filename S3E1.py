@@ -1,6 +1,6 @@
-temp_media_mes: list = []
+temp_media_mes: list[float] = []
 mes: int = 1
-float_temp: float
+float_temp: float = float()
 qual_temperatura: str = str(input("Digite qual formato de temperatura será usado (°F/°C) "))
 qual_pais: str = str(input("Digite de qual país é a temperatura "))
 media_anual: float = 0

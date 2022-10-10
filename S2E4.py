@@ -1,6 +1,6 @@
 def converte_horas(horario: str) -> str:
     string_horario: str = horario
-    lista_horario: list = string_horario.split(":")
+    lista_horario: list[str] = string_horario.split(":")
     horas_string: str = lista_horario[0]
     minutos_string: str = lista_horario[1]
     horas_float: float = float(horas_string)

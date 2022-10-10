@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "exhaustiveness-checking"
+version = "0.1.0"
+description = "Demonstration of the new checking available in Python 3.10 + Pyright."
+authors = ["Robb Shecter <robb@public.law>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyright = "^1.1.256"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+pythonVersion = "3.10"
+ignore = ["**/typings"]
+
+# As strict as possible: strict mode plus the optional strict checks.
+typeCheckingMode = "strict"
+reportCallInDefaultInitializer = "error"
+reportImplicitStringConcatenation = "error"
+reportMissingSuperCall = "error"
+reportPropertyTypeMismatch = "error"
+reportUninitializedInstanceVariable = "error"
+reportUnnecessaryTypeIgnoreComment = "error"
+reportUnusedCallResult = "error"
+reportUnusedImport = "warning"
