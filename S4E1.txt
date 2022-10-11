@@ -1,0 +1,5 @@
+1) Escreva um programa em PYTHON que leia números inteiros e armazene 
+em uma pilha. A entrada de dados deve ser interrompida quando o usuário 
+informar o número zero ou esgotar a quantidade definida de elementos a 
+serem armazenados na estrutura (caso quiser definir uma quantidade). Por 
+último, imprima os elementos na ordem em que foram removidos da pilha.
