@@ -1,14 +1,6 @@
-'''
-1) Escreva um programa em PYTHON que leia números inteiros e armazene 
-em uma pilha. A entrada de dados deve ser interrompida quando o usuário 
-informar o número zero ou esgotar a quantidade definida de elementos a 
-serem armazenados na estrutura (caso quiser definir uma quantidade). Por 
-último, imprima os elementos na ordem em que foram removidos da pilha.
-'''
-
 class Pilha:
     def __init__(self):
-        self.itens: list = []
+        self.itens: list[int] = []
     
     def vazia(self):
         return self.itens == []
@@ -28,7 +20,7 @@ class Pilha:
 numero_base: int = 0
 numero_usuario: int = 1
 pilha = Pilha()
-itens: list = pilha.itens
+itens: list[int] = pilha.itens
 while (numero_base <= 10) and (numero_usuario >= 1):
     numero_usuario = int(input("Digite um valor inteiro: "))    
     pilha.enviar(numero_usuario)
@@ -36,10 +28,11 @@ while (numero_base <= 10) and (numero_usuario >= 1):
 
 deletar_itens: str = "N"
 while deletar_itens != ("S" or "N"):
-    deletar_itens = input("\nDeseja deletar os itens da pilha? (S\N) ")
-
+    deletar_itens = input("\nDeseja deletar os itens da pilha? (S/N) ")
     match deletar_itens:
         case "N":
             print("Saindo...")
         case "S":
             print("Deletando...")
+        case _:
+            pass
