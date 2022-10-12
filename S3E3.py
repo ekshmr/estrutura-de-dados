@@ -66,7 +66,7 @@ while contador < 5:
         catalogo.update(dict({nome_carro:{"kWh/km":kWh_a_cada_km,"Tipo":tipo_carro,"R$/km":reais_por_km_rodados}}))
     contador += 1
 print(catalogo)
-## CRÉDITOS AO ZERO ##
+""" ## CRÉDITOS AO ZERO ##
 carro_eco: list[str | int] = ['', 999]
 for x in catalogo:
     if catalogo[x]["R$/km"] <= carro_eco[1]:
@@ -74,4 +74,4 @@ for x in catalogo:
             carro_eco[1] = catalogo[x]["R$/km"]
 
 print("Carro mais economico: ", carro_eco[0])
-## FIM CRÉDITOS AO ZERO ##
+## FIM CRÉDITOS AO ZERO ## """

@@ -1,0 +1,3 @@
+3) Escreva uma função que receba como parâmetro duas pilhas e verifique se 
+elas são iguais.
+Duas pilhas são iguais se possuem os mesmos elementos, na mesma ordem.

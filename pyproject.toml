@@ -2,7 +2,7 @@
 name = "exhaustiveness-checking"
 version = "0.1.0"
 description = "Demonstration of the new checking available in Python 3.10 + Pyright."
-authors = ["Robb Shecter <robb@public.law>"]
+authors = ["Enzo Koshimura <enzokoshimura@icloud.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
