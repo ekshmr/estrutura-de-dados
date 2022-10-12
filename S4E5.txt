@@ -1,0 +1,6 @@
+5) Escreva uma função que recebe como parâmetro 2 pilhas (N e P) e uma 
+lista de números inteiros. Para cada valor da lista:
+se positivo, inserir na pilha P;
+se negativo, inserir na pilha N;
+se zero, retirar um elemento de cada pilha.
+A lista de números inteiros deve ter 8 elementos.
