@@ -1,6 +1,6 @@
-from S4C1 import Stack
+from S4C1 import IntegerStack
 contador = 10
-Pilha = Stack()
+Pilha = IntegerStack()
 while contador > 0:
     valor = int(input("Digite um valor "))
     Pilha.push(valor)

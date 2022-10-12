@@ -1,6 +1,6 @@
-from S4C1 import Stack
-Pilha = Stack()
-Pilha2 = Stack()
+from S4C1 import FloatStack
+Pilha = FloatStack()
+Pilha2 = FloatStack()
 contador: int = 3
 inserir_valor: str
 numero_usuario: float
@@ -14,7 +14,7 @@ while contador > 0 and inserir_valor != "n":
         numero_usuario = float(input("Digite o que deseja inserir na pilha 2 "))
         Pilha2.push(numero_usuario)
     contador -= 1
-def pilhasIguais(Pilha1 : Stack, Pilha2 : Stack, contado : int) -> bool:
+def pilhasIguais(Pilha1 : FloatStack, Pilha2 : FloatStack, contado : int) -> bool:
     sao_iguais: bool = False
     while contado > 0:
         if Pilha1.peek() == Pilha2.peek():

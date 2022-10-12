@@ -1,4 +1,4 @@
-from S4C1 import Stack
+from S4C1 import StringStack
 import random
 import string
 numeros: str = string.digits
@@ -15,7 +15,7 @@ def criaCarro() -> str:
     return caractere
 contador = int()
 contador = 0
-Pilha = Stack()
+Pilha = StringStack()
 while contador < 10:
     contador += 1
     Pilha.push(criaCarro())
@@ -32,9 +32,9 @@ while rodando == True:
     mensagem_usuario = input("Qual carro deseja tirar? ")
     print("Será necessário tirar os carros")
     while verifica_carros == True:
-        if Pilha.peek_str() != mensagem_usuario:
+        if Pilha.peek() != mensagem_usuario:
             print(Pilha.peek())
             _ = Pilha.pop()
-        if Pilha.peek_str() == mensagem_usuario:
+        if Pilha.peek() == mensagem_usuario:
             verifica_carros = False
     rodando = False
