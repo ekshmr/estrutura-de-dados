@@ -1,3 +1,5 @@
+from typing import Type
+
 class Stack:
     def __init__(self):
         super().__init__()
@@ -9,7 +11,7 @@ class Stack:
     def push(self, item: float | str):
         self.items.append(item)
     
-    def pop(self):
+    def pop(self) -> Type[float]:
         return self.items.pop()
 
     def peek(self):
