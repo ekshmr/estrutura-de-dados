@@ -9,6 +9,6 @@ while contador > 0:
 while contador < 11:
     if Pilha.isEmpty() == False:
         print(Pilha.peek())
-        Pilha.pop()
+        _ = Pilha.pop()
     contador += 1
 ##print(Pilha.peek())

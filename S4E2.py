@@ -1,11 +1,11 @@
 from S4C1 import Stack
 import random
 import string
-numeros = string.digits
-letras = string.ascii_uppercase
-def criaCarro():
-    caractere = str()
-    contador = 0
+numeros: str = string.digits
+letras: str = string.ascii_uppercase
+def criaCarro() -> str:
+    caractere: str = str()
+    contador: int = 0
     while contador < 8:
         if (contador > 0 and contador < 4) or (contador == 5):
             caractere = caractere + str(random.choice(letras))
@@ -24,7 +24,7 @@ rodando: bool = True
 mensagem_usuario: str
 verifica_carros: bool = True
 while rodando == True:
-    mensagem_usuario = input("Deseja retirar um carro? (S/n) ")
+    mensagem_usuario = str(input("Deseja retirar um carro? (S/n) "))
     if mensagem_usuario != "S":
         rodando = False
         verifica_carros = False
@@ -32,9 +32,9 @@ while rodando == True:
     mensagem_usuario = input("Qual carro deseja tirar? ")
     print("Será necessário tirar os carros")
     while verifica_carros == True:
-        if Pilha.peek() != mensagem_usuario:
+        if Pilha.peek_str() != mensagem_usuario:
             print(Pilha.peek())
-            Pilha.pop()
-        if Pilha.peek() == mensagem_usuario:
+            _ = Pilha.pop()
+        if Pilha.peek_str() == mensagem_usuario:
             verifica_carros = False
     rodando = False

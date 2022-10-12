@@ -1,12 +1,17 @@
-from typing import TypedDict
-
-
+""" from typing import TypedDict
+class Valor(TypedDict):
+    litros_kilometros: float
+    tipo: float
+    reais_kilometros: float
+class Catalogo(TypedDict):
+    valor: Valor    
+catalogo: Catalogo = {
+    'valor': {'litros_kilometros': 1.1, 'tipo': 1.1, 'reais_kilometros': 1.1}
+} """
+catalogo: dict[str, dict[str, str | float]] = dict()
 contador: int = 0
 nome_carro: str
 qual_carro: str = str()
-class Catalogo(TypedDict):
-    modelo: str
-    valores: dict[str, dict[str, float]]
 litros_a_cada_cem_km_str: str
 litros_a_cada_cem_km: float
 tipo_carro: str
@@ -66,12 +71,11 @@ while contador < 5:
         catalogo.update(dict({nome_carro:{"kWh/km":kWh_a_cada_km,"Tipo":tipo_carro,"R$/km":reais_por_km_rodados}}))
     contador += 1
 print(catalogo)
-""" ## CRÉDITOS AO ZERO ##
-carro_eco: list[str | int] = ['', 999]
+## CRÉDITOS AO ZERO ##
+""" carro_eco: list[str | int] = ['', 999]
 for x in catalogo:
     if catalogo[x]["R$/km"] <= carro_eco[1]:
             carro_eco[0] = x
             carro_eco[1] = catalogo[x]["R$/km"]
-
 print("Carro mais economico: ", carro_eco[0])
 ## FIM CRÉDITOS AO ZERO ## """
