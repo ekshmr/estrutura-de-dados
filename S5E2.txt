@@ -1,0 +1,9 @@
+2) Simule a execução do código (descreva o que ocorre com a fila em cada linha 
+de código e indique a saída exibida em vídeo:
+Q = Queue()
+Q.enqueue(1)
+Q.enqueue(2)
+Q.enqueue(3)
+Q.enqueue(Q.dequeue())
+Q.enqueue(Q.dequeue())
+print(Q.dequeue())
