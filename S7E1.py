@@ -1,4 +1,4 @@
-from S5C1 import IntegerQueue
+from S7C1 import IntegerQueue
 contador: int = 1
 valor_usuario: int
 Fila = IntegerQueue()

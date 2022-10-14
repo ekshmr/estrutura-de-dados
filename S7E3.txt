@@ -1,0 +1,3 @@
+3) Considere uma fila contendo números inteiros que foram informados pelo 
+usuário. Escreva uma função que calcule o maior, o menor e a media 
+aritmética dos seus elementos.

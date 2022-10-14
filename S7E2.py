@@ -1,4 +1,4 @@
-from S5C1 import IntegerQueue
+from S7C1 import IntegerQueue
 Fila = IntegerQueue() # Cria intância da classe Integer Queue
 Fila.enqueue(1) # Coloca 1 na primeira posição da fila
 Fila.enqueue(2) # Coloca 2 na segunda posição da fila
