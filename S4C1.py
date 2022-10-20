@@ -35,7 +35,7 @@ class FloatStack:
     def peek(self):
         return self.items[len(self.items)-1]
     
-    def tamanho(self):
+    def size(self):
         return len(self.items)
 
 class IntegerStack:

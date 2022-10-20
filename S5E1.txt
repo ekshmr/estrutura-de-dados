@@ -1,0 +1,6 @@
+1) Construa um programa que solicite ao usuário que digite a url de um site 
+que será acessado. Ao receber uma nova URL, armazene na pilha. Possibilite 
+ao usuário, resgatar as URLs acessadas anteriormente na ordem de visitação 
+ao solicitar “Voltar” às páginas anteriores. A ideia é construir uma aplicação 
+que possibilite simular os botões voltar e avançar do navegador de sites da 
+internet.
